@@ -24,12 +24,12 @@
 users=> (require 'my-ns.foo :reload)
 ```
 
-- `:reload-all`は依存するライブラリをディープリロードする。
+- `:reload-all` は依存するライブラリをディープリロードする。
 - しかし... |
     - お互いに参照するNamespaceを変更した場合、正しい順番でリロードしなければならない。 |
     - 定義をファイルから削除してもメモリに残っている。 |
-    - `defmulti`を含むNamespaceをリロードする場合、`defmethod`もリロードする必要がある。 |
-    - `defprotocol`を含むNamespaceをリロードする場合、実装しているレコードなどもリロードする必要がある。 |
+    - `defmulti` を含むNamespaceをリロードする場合、`defmethod`もリロードする必要がある。 |
+    - `defprotocol` を含むNamespaceをリロードする場合、実装しているレコードなどもリロードする必要がある。 |
     - マクロを含むNamespaceをリロードする場合、そのマクロを使っているNamespaceもリロードする必要がある。 |
 - 自分で管理するのは大変...
 
@@ -56,5 +56,8 @@ users=> (require 'my-ns.foo :reload)
 ---
 
 ### clojure.tools.namespace
+
+- `ns-tracker` では実現していない、古い定義の消去をしてくれる。
+- その結果、 `def` は常にリロードされる。 `defonce` も効果なし。 
 
 
