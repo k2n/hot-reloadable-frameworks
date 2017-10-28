@@ -23,13 +23,14 @@
 ```clojure
 users=> (require 'my-ns.foo :reload)
 ```
+
 * `:reload-all`は依存するライブラリをディープリロードする。
 * しかし... |
-    * お互いに参照するNamespaceを変更した場合、正しい順番でリロードしなければならない。|
-    * 定義をファイルから削除してもメモリに残っている。|
-    * `defmulti`を含むNamespaceをリロードする場合、`defmethod`もリロードする必要がある。|
-    * `defprotocol`を含むNamespaceをリロードする場合、実装しているレコードなどもリロードする必要がある。|
-    * マクロを含むNamespaceをリロードする場合、そのマクロを使っているNamespaceもリロードする必要がある。|
+    * お互いに参照するNamespaceを変更した場合、正しい順番でリロードしなければならない。 |
+    * 定義をファイルから削除してもメモリに残っている。 |
+    * `defmulti`を含むNamespaceをリロードする場合、`defmethod`もリロードする必要がある。 |
+    * `defprotocol`を含むNamespaceをリロードする場合、実装しているレコードなどもリロードする必要がある。 |
+    * マクロを含むNamespaceをリロードする場合、そのマクロを使っているNamespaceもリロードする必要がある。 |
 * 自分で管理するのは大変...
 
 ---
@@ -40,8 +41,8 @@ users=> (require 'my-ns.foo :reload)
 * 後述する`clojure.tools.namespace`の一部機能を利用している。
 * [Athosさんのパッチ](https://github.com/weavejester/ns-tracker/pull/17) 
 * 削除したシンボルがリロード後もメモリに残っていることに注意！
-* デモ|
-* いちいちリロードを手動で呼ぶのはめんどくさいので...|
+* デモ |
+* いちいちリロードを手動で呼ぶのはめんどくさいので... |
 ---
 
 ### weavejester/ring
