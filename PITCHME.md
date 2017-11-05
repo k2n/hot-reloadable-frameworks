@@ -56,7 +56,28 @@ users=> (require 'my-ns.foo :reload)
 
 ### clojure.tools.namespace
 
-- `ns-tracker` では実現していない、古い定義の消去をしてくれる。
-- その結果、 `def` は常にリロードされる。 `defonce` も効果なし。 |
+- デモ
+- `defonce`が再評価されていることに注目 
+- `tools.namespace`は`ns-tracker`と違い、古いコードを破棄する | 
+- `def`, `defonce`でグローバルステートの管理ができない |
+- ステートを管理する仕組みが必要... |
+
+---
+
+### Stuart Sierra's Component
+
+- Map, またはRecordを定義し、start/stop時に操作が必要なら `component/Lifecycle` プロトコルを実装する
+- Map/Recordの依存関係を記述するシステム・マップを定義する。 | 
+- REPLから `start`, `reload`を呼んでコードの変更を反映させる。|
+- `danielsz/system` が汎用コンポーネントを提供している。 | 
+
+---
+
+### Componentの使い方 (1) Map/Recordを定義
+
+---?code=https://raw.githubusercontent.com/danielsz/system/master/src/system/components/jdbc.clj&lang=clojure
+
+
+
 
 
