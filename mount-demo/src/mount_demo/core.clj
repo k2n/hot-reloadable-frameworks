@@ -1,6 +1,5 @@
-(ns mount-demo.core)
+(ns mount-demo.core
+  (:require [mount-demo.db :refer [conn]]
+            [taoensso.timbre :as log]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(log/info "connection: " conn)
