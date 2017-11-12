@@ -1,13 +1,13 @@
 ---
 
-### ホットリローダブルなDI Clojure App
+# ホットリローダブルなDI Clojure App
 
-    - clj-ebisu #1 2017/11/14
-    - 株式会社シグニファイア代表 中村研二
+- clj-ebisu #1 2017/11/14
+- 株式会社シグニファイア代表 中村研二
 
 ---
 
-### なぜホットリローディングしたいのか？
+## なぜホットリローディングしたいのか？
 
 - REPLの起動が遅い
     - 再起動の回数を減らすしかない！|
@@ -16,7 +16,7 @@
 
 ---
 
-### require :reload
+## require :reload
 
 - `clojure.core.require` ... ライブラリをローディング
     - :reload-allは依存するライブラリをディープリロードする。
@@ -34,7 +34,7 @@ users=> (require 'my-ns.foo :reload)
 
 ---
 
-### weavejester/ns-tracker
+## weavejester/ns-tracker
 
 - リロードの順番を管理してくれるライブラリ
 - 後述する`clojure.tools.namespace`の一部機能を利用している。
@@ -44,7 +44,7 @@ users=> (require 'my-ns.foo :reload)
 - いちいちリロードを手動で呼ぶのはめんどくさいので... |
 ---
 
-### weavejester/ring
+## weavejester/ring
 
 ---?code=ring-devel-demo/resources/reload.clj&lang=clojure
 
@@ -54,7 +54,7 @@ users=> (require 'my-ns.foo :reload)
  
 ---
 
-### clojure.tools.namespace
+## clojure.tools.namespace
 
 - デモ
 - `defonce`が再評価されていることに注目 
@@ -64,7 +64,7 @@ users=> (require 'my-ns.foo :reload)
 
 ---
 
-### Stuart Sierra's Component
+## Stuart Sierra's Component
 
 - Map, またはRecordを定義し、start/stop時に操作が必要なら `component/Lifecycle` プロトコルを実装する
 - Map/Recordの依存関係を記述するシステム・マップを定義する。 | 
@@ -73,16 +73,13 @@ users=> (require 'my-ns.foo :reload)
 
 ---
 
-### Componentの使い方 (1) Map/Recordを定義
+## Componentの使い方 (1) Map/Recordを定義
 
----?code=https://raw.githubusercontent.com/danielsz/system/master/src/system/components/jdbc.clj&lang=clojure
 
-@[1-3]
-@[7]
-@[8]
-@[9-12]
-@[13-16]
-@[18-22]
+---
+## Componentの使い方 (2) Componentを登録する
 
+---
+## Componentの使い方 (3) システムを起動、リロードする
 
 
