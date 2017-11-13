@@ -3,13 +3,12 @@
 # ホットリローダブルなDI Clojure App
 
 - clj-ebisu #1 2017/11/14
-- 株式会社シグニファイア代表 中村研二
+- 株式会社シグニファイア代表 中村研二 (github: k2n, twitter: @k2nakamura)
 
 ---
 
 ## 発表者について
 
-- 株式会社シグニファイア代表 中村研二 (github: k2n, twitter: @k2nakamura) 
 - 93-96年 野村総合研究所, 98-00年 NRIパシフィック、00-16年 ベイエリアスタートアップ数社で勤務
 - 15年からフルタイムでClojure開発
 - 15年、200億円規模の米国証券バックオフィスシステムにClojureを適用
@@ -18,8 +17,7 @@
 - 16年、たばこ卸売業向けEコマースとたばこ税申告システム
     - AWS Lambda, Incanter, compojure-api, reagent, postgresql, docker, rancher, AWS
 - 17年、グローバル法律事務所紹介ネットワークシステムでLegalWeek Innovation Awardsを受賞
-    - Client-side: reagent, re-frame
-    - Server-side: compojure-api, elastic search, postgresql, docker, rancher, AWS
+    - reagent, re-frame, compojure-api, elastic search, postgresql, docker, rancher, AWS
 
 ---
 
@@ -138,8 +136,8 @@ users=> (require 'my-ns.foo :reload)
 ## weavejester/integrant まとめ
 
 - ss-componentの弱点の多くが改善されている。
-- `ig/init` を呼び出すnamespaceは、全てのコンポーネントをrequireしなければならない。 => `load-namespaces` ヘルパー
-- それでも、namespaceとcomponentの２つの構造を意識するオーバーヘッドが存在することに変わりはない。
+- `ig/init` を呼び出すnamespaceは、全てのコンポーネントをrequireしなければならない。 => `load-namespaces` ヘルパー |
+- それでも、namespaceとcomponentの２つの構造を意識するオーバーヘッドが存在することに変わりはない。 |
 
 ---
 
@@ -173,6 +171,6 @@ LISPプログラムをフォーム毎にソケット経由で送信し、受信�
 
 ## まとめ
 
-- tools.namespaceの「黒板を一旦消して全部書き直す」ことで得られる古い定義の消去するメリットをとるか、clojureの `require :reload` による `def` `defonce` のセマンティクスを尊重した振る舞いをとるか。 |
+- tools.namespaceの「黒板を一旦消して全部書き直す」ことで得られる古い定義の消去するメリットをとるか、clojureの'require :reload'による'def', 'defonce'のセマンティクスを尊重した振る舞いをとるか。 |
 - フレームワークにのっかるメリットをとるか、ライブラリとして素のClojureエクスペリエンスを尊重するか。 |
 - 一緒にClojureの可能性を追求しませんか？ コンサル・開発、ご相談ください！ |
