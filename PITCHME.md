@@ -76,17 +76,17 @@ users=> (require 'my-ns.foo :reload)
 ## clojure.tools.namespace まとめ
 
 - `defonce`が再評価されていることに注目 
-- `def`, `defonce` でグローバルステートの管理ができない |
+- `def` , `defonce` でグローバルステートの管理ができない |
 - ステートを管理する仕組みが必要... |
 
 ---
 
 ## stuartsierra/compoenent
 
-- Map, またはRecordを定義し、start/stop時に操作が必要なら `component/Lifecycle` プロトコルを実装する
+- Map, またはRecordを定義し、start/stop時に操作が必要ならcomponent/Lifecycleプロトコルを実装する
 - Map/Recordの依存関係を記述するシステム・マップを定義する。 | 
-- REPLから `start` , `reload` を呼んでコードの変更を反映させる。|
-- `danielsz/system` が汎用コンポーネントを提供している。 | 
+- REPLから'start','reload'を呼んでコードの変更を反映させる。|
+- danielsz/systemが汎用コンポーネントを提供している。 | 
 
 --- 
 
@@ -97,11 +97,10 @@ users=> (require 'my-ns.foo :reload)
 ## stuartsierra/component まとめ
 
 - tools.namespaceと組み合わせてステートを管理し、DIを提供する
-- defがSystem以外なくなるよう、アプリ全体がcomponentアーキテクチャを採用する必要があるので、
-既存のコードに対して漸進的に採用するのには向いていない。 |
+- defがSystem以外なくなるよう、アプリ全体がcomponentアーキテクチャを採用する必要があるので、既存のコードに対して漸進的に採用するのには向いていない。 |
 - コンポーネントして定義できるのは、MapまたはRecordのみ |
 - Systemを部分的に再起動することができないので、コネクションの保持など、開発向けに異なる振る舞いを得たい場合には別のSystemを定義する必要がある。|
-- オブジェクト指向っぽくなる。 `this` , データ構造操作用のメソッド |
+- オブジェクト指向っぽくなる。'this', データ構造操作用のメソッド |
 - Namespaceの依存関係とcomponentグラフが別れているため、類似の関係性を重複定義する手間があり、また両者が一致するとは限らないので、認知負荷が上がる。 |
 
 ---
@@ -158,6 +157,6 @@ LISPプログラムをフォーム毎にソケット経由で送信し、受信�
 
 ## まとめ
 
-- tools.namespaceの「黒板を一旦消して全部書き直す」ことで得られる古い定義の消去するメリットをとるか、clojureの `require :reload` による `def` `defonce` のセマンティクスを尊重した振る舞いをとるか。
+- tools.namespaceの「黒板を一旦消して全部書き直す」ことで得られる古い定義の消去するメリットをとるか、clojureの `require :reload` による `def` `defonce` のセマンティクスを尊重した振る舞いをとるか。 |
 - フレームワークにのっかるメリットをとるか、ライブラリとして素のClojureエクスペリエンスを尊重するか。 |
-- 一緒にClojureの可能性を追求しませんか？ コンサル・開発、ご相談ください！
+- 一緒にClojureの可能性を追求しませんか？ コンサル・開発、ご相談ください！ |
