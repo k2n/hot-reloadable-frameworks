@@ -1,9 +1,13 @@
 (ns integrant-demo.system
   (:require [integrant.core :as ig]
             [integrant-demo.components :refer [components]]
-            [integrant-demo.conf]
-            [integrant-demo.core]
-            [integrant-demo.db]))
+            ;; ig/load-namespacesを使えば下記の定義は不要
+            ;[integrant-demo.conf]
+            ;[integrant-demo.core]
+            ;[integrant-demo.db]
+))
+
+(ig/load-namespaces components)
 
 (defn init []
   (ig/init components))

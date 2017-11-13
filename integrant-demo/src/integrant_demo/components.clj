@@ -3,9 +3,9 @@
             [taoensso.timbre :as log]))
 
 (def components
-  {:conf/conf {:conf {:db {:url      "jdbc:postgresql://localhost:5432/mydb2"
-                           :username "postgres"
-                           :password "password123"}}}
+  {:integrant-demo.conf/conf {:conf {:db {:url      "jdbc:postgresql://localhost:5432/mydb2"
+                                          :username "postgres"
+                                          :password "password123"}}}
    ;; ig/refでDependency Ingection
-   :db/conn {:conf (ig/ref :conf/conf)}
-   :core/myfn {:conn (ig/ref :db/conn)}})
+   :integrant-demo.db/conn {:conf (ig/ref :integrant-demo.conf/conf)}
+   :integrant-demo.core/myfn {:conn (ig/ref :integrant-demo.db/conn)}})

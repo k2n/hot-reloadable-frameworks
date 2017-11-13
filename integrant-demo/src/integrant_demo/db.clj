@@ -1,5 +1,5 @@
 (ns integrant-demo.db
-  (:require [clojure.java.io :as io] 
+  (:require [clojure.java.io :as io]
             [integrant.core :as ig]
             [taoensso.timbre :as log]))
 
@@ -15,8 +15,8 @@
   (let [{:keys [url username password]} (:db conf)]
     (connection url username password)))
 
-(defmethod ig/init-key :db/conn [_ {:keys [conf]}]
+(defmethod ig/init-key :integrant-demo.db/conn [_ {:keys [conf]}]
   (open-connection conf))
 
-(defmethod ig/halt-key! :db/conn [_ conn]
+(defmethod ig/halt-key! :integrant-demo.db/conn [_ conn]
   (.close conn))
