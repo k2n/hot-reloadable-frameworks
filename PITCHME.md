@@ -2,7 +2,7 @@
 
 # ホットリローダブルなDI Clojure App
 
-- clj-ebisu #1 2017/11/14
+- clj-ebisu #1 2017/11/17
 - 株式会社シグニファイア代表 中村研二 (github: k2n, twitter: @k2nakamura)
 
 ---
@@ -63,7 +63,7 @@ users=> (require 'my-ns.foo :reload)
 ## weavejester/ns-tracker
 
 - リロードの順番を管理してくれるライブラリ
-- 後述する'clojure.tools.namespace'の一部機能を利用している。
+- 後述するclojure.tools.namespaceの一部機能を利用している。
 - [Athosさんのパッチ](https://github.com/weavejester/ns-tracker/pull/17) 
 - 削除したシンボルがリロード後もメモリに残っていることに注意 
 - デモ |
@@ -82,7 +82,7 @@ users=> (require 'my-ns.foo :reload)
 
 ## clojure.tools.namespace
 
-- 'tools.namespace'は'ns-tracker'と違い、古いコードを破棄する 
+- tools.namespaceはns-trackerと違い、古いコードを破棄する 
 - デモ |
 
 ---
@@ -99,7 +99,7 @@ users=> (require 'my-ns.foo :reload)
 
 - Map, またはRecordを定義し、start/stop時に操作が必要ならcomponent/Lifecycleプロトコルを実装する
 - Map/Recordの依存関係を記述するシステム・マップを定義する。 | 
-- REPLから'start','reload'を呼んでコードの変更を反映させる。|
+- REPLから'start', 'reload'を呼んでコードの変更を反映させる。|
 - danielsz/systemが汎用コンポーネントを提供している。 | 
 
 --- 
@@ -154,6 +154,7 @@ users=> (require 'my-ns.foo :reload)
 極小のコードを対話的に組み上げることができる。これはLISPプログラミングで非常に重要な部分である。
 LISPプログラムをフォーム毎にソケット経由で送信し、受信すると同時にコンパイル・評価することができる。
 だからマクロを定義すれば即座にそれを次のフォームの評価に利用することができるのである。
+
 > Rich Hickey
 
 ---
