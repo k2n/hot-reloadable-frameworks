@@ -9,7 +9,7 @@
 
 ## 発表者について
 
-- 93-96年 野村総合研究所, 98-00年 NRIパシフィック、00-16年 ベイエリアスタートアップ数社で勤務
+- 93-00年 野村総合研究所、00-16年 米国スタートアップ数社で勤務
 - 15年からフルタイムでClojure開発
 - 15年、200億円規模の米国証券バックオフィスシステムにClojureを適用
     - compojure-api, core.async, aleph, manifold, gloss, mysql, mongo db, docker, AWS
@@ -45,7 +45,7 @@
 
 ## require :reload
 
-- `clojure.core.require` ... ライブラリをローディング
+- clojure.core.require ... ライブラリをローディング
     - :reload-allは依存するライブラリをディープリロードする。
 
 ```clojure
@@ -63,7 +63,7 @@ users=> (require 'my-ns.foo :reload)
 ## weavejester/ns-tracker
 
 - リロードの順番を管理してくれるライブラリ
-- 後述する`clojure.tools.namespace`の一部機能を利用している。
+- 後述する'clojure.tools.namespace'の一部機能を利用している。
 - [Athosさんのパッチ](https://github.com/weavejester/ns-tracker/pull/17) 
 - 削除したシンボルがリロード後もメモリに残っていることに注意 
 - デモ |
@@ -82,7 +82,7 @@ users=> (require 'my-ns.foo :reload)
 
 ## clojure.tools.namespace
 
-- `tools.namespace`は`ns-tracker`と違い、古いコードを破棄する 
+- 'tools.namespace'は'ns-tracker'と違い、古いコードを破棄する 
 - デモ |
 
 ---
@@ -136,14 +136,14 @@ users=> (require 'my-ns.foo :reload)
 ## weavejester/integrant まとめ
 
 - ss-componentの弱点の多くが改善されている。
-- `ig/init` を呼び出すnamespaceは、全てのコンポーネントをrequireしなければならない。 => `load-namespaces` ヘルパー |
+- 'ig/init'を呼び出すnamespaceは、全てのコンポーネントをrequireしなければならない。 => 'load-namespaces'ヘルパー |
 - それでも、namespaceとcomponentの２つの構造を意識するオーバーヘッドが存在することに変わりはない。 |
 
 ---
 
 ## tolitius/mount
 
-- `defstate` で、 `def` に、スタート・ストップ時の振る舞いを持たせる。
+- 'defstate'で、'def'に、スタート・ストップ時の振る舞いを持たせる。
 - ステート間の依存関係は、ClojureのNamespaceで行われるので、言語と異なるフローを意識する必要がない。
 - 既存のアプリへ、漸進的に導入することが可能。
 - tools.namespaceよりもns-trackerのほうが相性が良いのでは？
