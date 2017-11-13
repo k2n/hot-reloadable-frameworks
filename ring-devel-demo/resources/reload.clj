@@ -19,12 +19,7 @@
             (recur)))))))
 
 (defn wrap-reload
-  "Reload namespaces of modified files before the request is passed to the
-  supplied handler.
-
-  Accepts the following options:
-
-  :dirs                   - A list of directories that contain the source files.
+  ":dirs                   - A list of directories that contain the source files.
                             Defaults to [\"src\"].
   :reload-compile-errors? - If true, keep attempting to reload namespaces
                             that have compile errors.  Defaults to true."
