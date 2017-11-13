@@ -7,6 +7,22 @@
 
 ---
 
+## 発表者について
+
+- 株式会社シグニファイア代表 中村研二 (github: k2n, twitter: @k2nakamura) 
+- 93-96年 野村総合研究所, 98-00年 NRIパシフィック、00-16年 ベイエリアスタートアップ数社で勤務
+- 15年からフルタイムでClojure開発
+- 15年、200億円規模の米国証券バックオフィスシステムにClojureを適用
+    - compojure-api, core.async, aleph, manifold, gloss, mysql, mongo db, docker, AWS
+- 16年、Clojure+Docker+Micro Services+AWSでビスポーク開発を提供する株式会社シグニファイアを設立
+- 16年、たばこ卸売業向けEコマースとたばこ税申告システム
+    - AWS Lambda, Incanter, compojure-api, reagent, postgresql, docker, rancher, AWS
+- 17年、グローバル法律事務所紹介ネットワークシステムでLegalWeek Innovation Awardsを受賞
+    - Client-side: reagent, re-frame
+    - Server-side: compojure-api, elastic search, postgresql, docker, rancher, AWS
+
+---
+
 ## なぜホットリローディングしたいのか？
 
 - REPLの起動が遅い
@@ -75,8 +91,8 @@ users=> (require 'my-ns.foo :reload)
 
 ## clojure.tools.namespace まとめ
 
-- `defonce`が再評価されていることに注目 
-- `def` , `defonce` でグローバルステートの管理ができない |
+- 'defonce'が再評価されていることに注目 
+- 'def','defonce'でグローバルステートの管理ができない |
 - ステートを管理する仕組みが必要... |
 
 ---
