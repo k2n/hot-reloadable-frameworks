@@ -175,3 +175,5 @@ LISPプログラムをフォーム毎にソケット経由で送信し、受信�
 - tools.namespaceの「黒板を一旦消して全部書き直す」ことで得られる古い定義の消去するメリットをとるか、clojureの'require :reload'による'def', 'defonce'のセマンティクスを尊重した振る舞いをとるか。 |
 - フレームワークにのっかるメリットをとるか、ライブラリとして素のClojureエクスペリエンスを尊重するか。 |
 - 一緒にClojureの可能性を追求しませんか？ コンサル・開発、ご相談ください！ |
+- 11/30 [shibuya.lisp#58](https://lisp.connpass.com/event/71778/)でREPLからAWS Lambda/Gatewayにデプロイするportkeyについて紹介します！ |
+- 12/12 [clj-nakano#2](https://clj-nakano.connpass.com/event/71884/)開催します。Rich HickeyのValue of Values上映、Situated Program Challengeを行います！ | 
