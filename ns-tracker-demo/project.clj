@@ -6,4 +6,6 @@
   :dependencies [[org.clojure/clojure         "1.8.0"]
                  [com.taoensso/timbre         "4.10.0"]
                  [ns-tracker                  "0.3.1"]]
-  :source-paths ["src" "repl"])
+  :source-paths ["src" "repl"]
+  :profiles {:dev {:dependencies [[me.raynes/conch "0.8.0"]] 
+                   :plugins [[lein-gorilla "0.4.0"]]}})

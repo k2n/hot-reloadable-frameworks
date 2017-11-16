@@ -15,7 +15,7 @@
     - compojure-api, core.async, aleph, manifold, gloss, mysql, mongo db, docker, AWS
 - 16年、Clojure+Docker+Micro Services+AWSでビスポーク開発を提供する株式会社シグニファイアを設立
 - 16年、たばこ卸売業向けEコマースとたばこ税申告システム
-    - AWS Lambda, Incanter, compojure-api, reagent, postgresql, docker, rancher, AWS
+    - AWS Lambda, Incanter, compojure-api, clara-rules, reagent, postgresql, docker, rancher, AWS
 - 17年、グローバル法律事務所紹介ネットワークシステムでLegalWeek Innovation Awardsを受賞
     - reagent, re-frame, compojure-api, elastic search, postgresql, docker, rancher, AWS
 

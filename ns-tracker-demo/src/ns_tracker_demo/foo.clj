@@ -1,14 +1,14 @@
 (ns ns-tracker-demo.foo)
 
-(defn foo [] "foo is called")
+(defn foo [] "FOO IS CALLED")
 
 (defmacro with-foo [f]
   `(do (println "foo")
-      ~f))
+       ~f))
 
 (defprotocol IFoo
   (say [this]))
 
 (defrecord FooRecord [voice]
-  IFoo 
+  IFoo
   (say [this] (str "Hi, " (:voice this))))
