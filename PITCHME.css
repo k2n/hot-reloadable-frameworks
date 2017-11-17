@@ -8,10 +8,11 @@ section.present {
 
 .reveal .slides {
   width: 1000px;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .reval .slides section>* {
-  mergin-left: 20;
-  margin-right 20;
+  mergin-left:  20;
+  margin-right: 20;
+  margin-bottom: 20;
 }
