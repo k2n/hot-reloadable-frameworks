@@ -10,7 +10,6 @@
 ## 発表者について
 
 - 93-00年 野村総合研究所、00-16年 米国スタートアップ数社で勤務
-- 15年からフルタイムでClojure開発
 - 15年、200億円規模の米国証券バックオフィスシステムにClojureを適用
     - compojure-api, core.async, aleph, manifold, gloss, mysql, mongo db, docker, AWS
 - 16年、Clojure+Docker+Micro Services+AWSでビスポーク開発を提供する株式会社シグニファイアを設立
