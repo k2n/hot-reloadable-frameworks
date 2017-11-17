@@ -12,7 +12,7 @@
         edn/read-string))
 
 (defn load-conf []
-  {:db {:url      "jdbc:postgresql://localhost:5432/mydb2"
+  {:db {:url      "jdbc:postgresql://localhost:5432/mydb"
         :username "postgres"
         :password "password123"}})
 

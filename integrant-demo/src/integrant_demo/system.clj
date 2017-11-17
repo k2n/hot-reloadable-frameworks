@@ -2,8 +2,8 @@
   (:require [integrant.core :as ig]
             [integrant-demo.components :refer [components]]
             ;; ig/load-namespacesを使えば下記の定義は不要
+            ;[integrant-demo.app]
             ;[integrant-demo.conf]
-            ;[integrant-demo.core]
             ;[integrant-demo.db]
 ))
 

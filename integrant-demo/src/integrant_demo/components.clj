@@ -8,4 +8,4 @@
                                           :password "password123"}}}
    ;; ig/refでDependency Ingection
    :integrant-demo.db/conn {:conf (ig/ref :integrant-demo.conf/conf)}
-   :integrant-demo.core/myfn {:conn (ig/ref :integrant-demo.db/conn)}})
+   :integrant-demo.app/myfn {:conn (ig/ref :integrant-demo.db/conn)}})

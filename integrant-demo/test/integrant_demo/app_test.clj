@@ -1,6 +1,6 @@
-(ns integrant-demo.core-test
+(ns integrant-demo.app-test
   (:require [clojure.test :refer :all]
-            [integrant-demo.core :refer :all]))
+            [integrant-demo.app :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

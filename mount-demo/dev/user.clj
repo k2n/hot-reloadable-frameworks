@@ -3,7 +3,8 @@
             [ns-tracker.core :refer [ns-tracker]]
             [mount-demo
              [conf]
-             [db]]))
+             [db]
+             [app]]))
 
 (def modified-namespaces
   (ns-tracker ["src" "test" "resources"]))
@@ -12,6 +13,6 @@
   (doseq [ns-sym (modified-namespaces)]
     (require ns-sym :reload)))
 
-(defn reset [args]
-  (stop args)
-  (start args))
+(defn reset []
+  (stop)
+  (start))

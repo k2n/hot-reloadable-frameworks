@@ -11,4 +11,7 @@
 
 
   :profiles {:dev {:source-paths ["dev"]
-                   :plugins [[com.jakemccrary/lein-test-refresh "0.21.1"]]}})
+                   :plugins [[com.jakemccrary/lein-test-refresh "0.21.1"]
+                             [lein-gorilla                      "0.4.0"]
+                             
+                             ]}})
