@@ -1,3 +1,4 @@
 {:db {:url "jdbc:postgresql://localhost:5432/mydb"
       :username "postgres"
-      :password "password123"}}
+      :password "password123"}
+ :app {:name "テストアプリ"}}

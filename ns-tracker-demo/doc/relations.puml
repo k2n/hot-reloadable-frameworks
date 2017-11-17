@@ -1,0 +1,12 @@
+@startuml
+[foo]
+[bar]
+[baz]
+[quux]
+
+bar -u-> foo
+baz -u-> foo
+quux -u-> foo
+quux -u-> bar
+quux -u-> baz
+@enduml

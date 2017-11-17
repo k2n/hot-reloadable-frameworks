@@ -99,7 +99,8 @@ users=> (require 'my-ns.foo :reload)
 
 - Map, またはRecordを定義し、start/stop時に操作が必要ならcomponent/Lifecycleプロトコルを実装する
 - Map/Recordの依存関係を記述するシステム・マップを定義する。 | 
-- REPLから'start', 'reload'を呼んでコードの変更を反映させる。|
+- REPLから'start', 'reset'を呼んでコードの変更を反映させる。|
+- tools.namespaceでrefreshする前にコンポーネントを止め、refreshし、システムマップを再生成し、それをステート管理に用いることで、def, defonceに依存せずにアプリケーションを記述する。 |
 - danielsz/systemが汎用コンポーネントを提供している。 | 
 
 --- 

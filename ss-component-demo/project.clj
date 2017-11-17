@@ -8,4 +8,5 @@
                  [org.clojure/tools.namespace "0.2.11"]
                  [com.stuartsierra/component  "0.3.2"]]
   :profiles {:dev {:source-paths ["dev"]
-                   :plugins [[com.jakemccrary/lein-test-refresh "0.21.1"]]}})
+                   :plugins [[com.jakemccrary/lein-test-refresh "0.21.1"]
+                             [lein-gorilla                      "0.4.0"]]}})

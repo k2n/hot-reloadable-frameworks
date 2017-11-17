@@ -5,4 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :source-paths ["src" "repl"]
   :dependencies [[org.clojure/clojure         "1.8.0"]
-                 [org.clojure/tools.namespace "0.2.11"]])
+                 [com.taoensso/timbre         "4.10.0"]
+                 [org.clojure/tools.namespace "0.2.11"]]
+  :profiles {:dev {:dependencies [[me.raynes/conch "0.8.0"]] 
+                   :plugins [[lein-gorilla "0.4.0"]]}})

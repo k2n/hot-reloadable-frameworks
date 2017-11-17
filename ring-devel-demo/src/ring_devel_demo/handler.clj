@@ -10,7 +10,7 @@
 (defroutes app-routes
   (GET "/" []
     (html5
-     [:body [:h1 "ring-devel デモ"]]))
+     [:body [:h1 "ring-devel デモ2"]]))
 
   (POST "/add-entry" [entry]
     (swap! history conj entry)

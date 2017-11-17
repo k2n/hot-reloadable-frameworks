@@ -2,4 +2,4 @@
   (:require [namespace-demo.foo :as foo]))
 
 (defn bar []
-  (foo/foo))
+  (foo/call-from-bar))

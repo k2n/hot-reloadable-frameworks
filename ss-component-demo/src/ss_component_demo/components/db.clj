@@ -16,6 +16,7 @@
   (start [component]
     (log/info "Starting DB...")
     (let [{:keys [url username password]} (:db (c/get-conf conf))]
+      (log/info "url:" url)
       (assoc component :conn (connection url username password))))
   (stop [component]
     (log/info "Stopping DB...")
